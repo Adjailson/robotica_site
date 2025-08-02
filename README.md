@@ -40,21 +40,18 @@ Siga o clube para acompanhar novidades e fotos dos projetos:
 
 ```
 robotica_suassuna/
-│
-├── app/
-│   ├── __init__.py
-│   ├── routes.py
-│   ├── static/         # (vazio, para futuros arquivos CSS/JS/imagens)
-│   └── templates/
-│       ├── base.html
-│       ├── index.html
-│       ├── sobre.html
-│       ├── galeria.html
-│       ├── espaco_maker.html
-│       ├── eventos.html
-│       └── contato.html
-│
-├── run.py
+├── routes.py
+├── static/         # (CSS/JS/imagens)
+└── templates/
+   ├── base.html
+   ├── index.html
+   ├── sobre.html
+   ├── galeria.html
+   ├── espaco_maker.html
+   ├── eventos.html
+   └── contato.html
+
+├── app.py
 └── requirements.txt
 ```
 
