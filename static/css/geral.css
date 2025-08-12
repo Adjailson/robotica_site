@@ -1,0 +1,29 @@
+:root {
+    --azul-escuro: #0a192f;
+    --laranja-escuro: #cc5500;
+    --preto: #000000;
+    --branco: #ffffff;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--branco);
+    background-color: var(--preto);
+}
+
+/*Rodapé - Liandro*/
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.footer-links a {
+    color: var(--branco);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover {
+    color: var(--laranja-escuro);
+}

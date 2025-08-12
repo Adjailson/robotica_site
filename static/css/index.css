@@ -1,0 +1,215 @@
+/*Cabeçalho*/
+.header {
+    background-color: var(--azul-escuro);
+    padding: 3rem 0;
+    border-bottom: 5px solid var(--laranja-escuro);
+}
+.img-fluid{
+    border-radius:50% ;
+}
+.logo {
+    width: 149px;
+    height: 149px;
+    background-color: var(--laranja-escuro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    color: var(--branco);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.btn-instagram {
+    background-color: var(--laranja-escuro);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-instagram:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}
+/*Seções*/
+.section-title {
+    color: var(--laranja-escuro);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--laranja-escuro);
+}
+
+.news-section, .projects-section {
+    padding: 4rem 0;
+    background-color: var(--azul-escuro);
+}
+
+.tech-section {
+    padding: 4rem 0;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+    background-size: cover;
+}
+
+.tech-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tech-content {
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+    height: 100%;
+    color: var(--branco);
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(204, 85, 0, 0.3);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--laranja-escuro);
+}
+
+.btn-outline-tech {
+    border: 1px solid var(--laranja-escuro);
+    color: var(--laranja-escuro);
+    transition: all 0.3s;
+}
+
+.btn-outline-tech:hover {
+    background-color: var(--laranja-escuro);
+    color: white;
+}
+
+.tech-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+.tech-item:hover {
+    background-color: rgba(204, 85, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.tech-icon {
+    font-size: 3rem;
+    color: var(--laranja-escuro);
+    margin-bottom: 1rem;
+}
+.tech-category {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tech-items-container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.tech-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.tech-item-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--laranja-escuro);
+    flex-shrink: 0;
+}
+
+.tech-item h4 {
+    margin: 0.5rem 0;
+    flex-shrink: 0;
+}
+
+.tech-item p {
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+.category-title {
+    color: var(--laranja-escuro);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.category-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--laranja-escuro);
+}
+
+@media (max-width: 767.98px) {
+    .tech-items-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-category {
+        margin-bottom: 2rem;
+    }
+}
