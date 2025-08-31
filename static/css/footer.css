@@ -1,0 +1,97 @@
+/* footer.css */
+
+/* Footer geral */
+.footer {
+  background-color: #1b2236;
+  color: white;
+  padding: 60px 10px;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+/* Barra superior do footer */
+.footer-top {
+  background-color: #FFA500;
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Logos */
+.footer-logo,
+.footer-club-logo {
+  max-height: 80px;
+}
+
+/* Separador vertical */
+.separator-vertical {
+  width: 2px;
+  background-color: white;
+  align-self: stretch;
+  margin: 0 12px;
+}
+
+/* Links e botões */
+.school-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.school-link:hover {
+  text-decoration: underline;
+  color:#ffa000;
+}
+.map-btn {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 8px;
+  background-color: #ffffff;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.map-btn:hover {
+  background-color: #ffa000;
+}
+
+/* Redes sociais */
+.social-links a {
+  display: inline-block;
+  width: 40px;           /* tamanho do círculo */
+  height: 40px;
+  border-radius: 50%;    /* deixa redondo */
+  background-color: #1b2236; /* cor da bola laranja */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+  margin-left: 8px;
+}
+
+.social-links a img {
+  width: 30px;  /* tamanho da imagem dentro da bolinha */
+  height: 30px;
+}
+
+.social-links a:hover {
+  transform: scale(1.1); /* aumenta levemente ao passar o mouse */
+  background-color: #FFA500; /* muda levemente a cor da bolinha ao hover */
+}
+
+.footer-bottom a {
+  color: white; /* cor padrão */
+  transition: color 0.3s;
+  padding: 10px 0px;
+  position: relative;
+}
+
+.footer-bottom a:hover {
+  color: #FFA500; /* laranja */
+  text-decoration: underline;
+}
+

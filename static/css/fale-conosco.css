@@ -1,0 +1,49 @@
+.fale-conosco {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #252e4c;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.fale-conosco-bg {
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: url('../images/crianca-fazendo-robo\ \(1\).jpg') center/cover no-repeat;
+  z-index: 0;
+  filter: brightness(0.5);
+}
+
+
+.fale-conosco .content {
+  position: relative;
+  z-index: 2;
+}
+
+.fale-conosco-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #FFA500;
+  margin-bottom: 30px;
+}
+
+.fale-conosco-form .form-control {
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+.fale-conosco-form button {
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+}
+
+.fale-conosco-form .form-control:focus {
+  border-color: #FFA500 !important;
+  box-shadow: 0 0 5px #FFA500; /* opcional, dá um brilho laranja ao redor */
+  outline: none;
+}
