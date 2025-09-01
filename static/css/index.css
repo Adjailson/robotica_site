@@ -1,0 +1,237 @@
+    /* Navbar */
+    
+    .navbar-custom {
+      background-color: #ffffff;
+      transition: all 0.3s ease;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .navbar-custom.shrink {
+      padding-top: 0.6rem !important;
+      padding-bottom: 0.6rem !important;
+    }
+    .navbar-logo {
+      height: 90px;
+      width: auto;
+      transition: all 0.3s ease;
+    }
+    .navbar-custom.shrink .navbar-logo {
+      height: 60px;
+    }
+    .navbar-nav {
+      gap: 15px;
+      align-items: center;
+    }
+    .navbar-nav .nav-link {
+      color:#2e4aa7;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #FFA500 !important;
+    }
+
+    /* Body */
+    body {
+      background-color: #ffffff;
+      color: white;
+      padding-top: 140px;
+    }
+    .body2 {
+      background-color: #252e4c;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Hero */
+    .hero {
+      position: relative;
+      background: url('../images/pai-e-filhos-fazendo-robo.jpg') center/cover no-repeat;
+      height: 50vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::before {
+      content: "";
+      filter: brightness(0.8);
+      position: absolute; top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+    }
+    .hero-text {
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 90vh;
+      color: white;
+      font-size: 2rem;
+    }
+    .hero-text h1 { color: #FFA500; }
+    .hero-row {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-title {
+      font-size: 3rem;
+      color: #FFA500;
+      margin-bottom: 20px;
+    }
+    .hero-robot {
+      width: 180px;
+      height: auto;
+    }
+
+    /* Fade-in com scroll */
+    .fade-in-element {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .fade-in-element.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-delay-1 { transition-delay: 0.2s; }
+    .fade-delay-2 { transition-delay: 0.4s; }
+    .fade-delay-3 { transition-delay: 0.6s; }
+    .fade-delay-4 { transition-delay: 0.8s; }
+
+    /* Section Titles */
+    .section-title {
+      margin-top: 50px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #FFA500;
+    }
+
+    /* Carousel imagens */
+    .carousel-item img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .carousel-item img:hover { transform: scale(1.08); }
+    .carousel { width: 100vw; margin-left: 0; margin-right: 0; }
+
+    /* Carousel arrows */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .carousel-control-prev { left: 10px; }
+    .carousel-control-next { right: 10px; }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(100%);
+      width: 3rem;
+      height: 3rem;
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 50%;
+      padding: 0.5rem;
+    }
+
+    /* Nosso Clube */
+    .nosso-clube {
+      position: relative;
+      padding: 0;
+      color: white;
+      overflow: hidden;
+    }
+    .nosso-clube .background-img {
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: url('../images/crianca estendendo um robo.jpg') center/cover no-repeat;
+      z-index: 0;
+      filter: brightness(0.5);
+    }
+    .nosso-clube .overlay-degrade {
+      position: absolute;
+      filter: brightness(0.8);
+      top:0; left:0; right:0; bottom:0;
+      background: linear-gradient(to bottom, rgba(37,46,76,0.8), rgba(255,165,0,0.6));
+      z-index: 1;
+    }
+    .nosso-clube .content {
+      position: relative;
+      z-index: 2;
+      padding: 40px 0;
+    }
+    .nosso-clube .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .separador-bg {
+  height: 10vh;       /* altura do espaço */
+  background-color: #252e4c; /* cor do espaço */
+}
+
+  .projetos-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .projeto-card {
+    background-color: #FFA500; /* fundo laranja */
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+
+  .projeto-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .projeto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn-vermais {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #FFA500;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .btn-vermais:hover {
+    background: #ff7b00;
+  }
