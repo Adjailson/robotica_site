@@ -4,9 +4,7 @@
     padding: 3rem 0;
     border-bottom: 5px solid var(--laranja-escuro);
 }
-.img-fluid{
-    border-radius:50% ;
-}
+
 .logo {
     width: 149px;
     height: 149px;
@@ -36,31 +34,7 @@
     background-color: #e65c00;
     transform: scale(1.05);
 }
-/*Seções*/
-.section-title {
-    color: var(--laranja-escuro);
-    text-align: center;
-    margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-.section-title:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background-color: var(--laranja-escuro);
-}
-
-.news-section, .projects-section {
-    padding: 4rem 0;
-    background-color: var(--azul-escuro);
-}
-
+/* Seção de Tecnologias*/
 .tech-section {
     padding: 4rem 0;
     position: relative;
@@ -82,62 +56,6 @@
     z-index: 1;
 }
 
-.card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 10px;
-    transition: all 0.3s;
-    height: 100%;
-    color: var(--branco);
-    margin-bottom: 1.5rem;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(204, 85, 0, 0.3);
-}
-
-.card-img-top {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-title {
-    color: var(--laranja-escuro);
-}
-
-.btn-outline-tech {
-    border: 1px solid var(--laranja-escuro);
-    color: var(--laranja-escuro);
-    transition: all 0.3s;
-}
-
-.btn-outline-tech:hover {
-    background-color: var(--laranja-escuro);
-    color: white;
-}
-
-.tech-item {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    transition: all 0.3s;
-}
-
-.tech-item:hover {
-    background-color: rgba(204, 85, 0, 0.2);
-    transform: scale(1.05);
-}
-
-.tech-icon {
-    font-size: 3rem;
-    color: var(--laranja-escuro);
-    margin-bottom: 1rem;
-}
 .tech-category {
     display: flex;
     flex-direction: column;
@@ -175,16 +93,6 @@
     flex-shrink: 0;
 }
 
-.tech-item h4 {
-    margin: 0.5rem 0;
-    flex-shrink: 0;
-}
-
-.tech-item p {
-    margin-bottom: 0;
-    flex-grow: 1;
-}
-
 .category-title {
     color: var(--laranja-escuro);
     text-align: center;
@@ -203,7 +111,93 @@
     height: 2px;
     background-color: var(--laranja-escuro);
 }
+/*Seção Mentor e alunos*/
+.team-section {
+    background-color: var(--cinza-escuro);
+}
 
+.mentor-card {
+    background: linear-gradient(145deg, var(--azul-escuro), var(--preto));
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.mentor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(204, 85, 0, 0.2);
+}
+
+.mentor-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--laranja-escuro);
+    margin: 0 auto 1.5rem;
+}
+
+.mentor-name {
+    color: var(--laranja-escuro);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.btn-view-members {
+    background-color: transparent;
+    color: var(--laranja-escuro);
+    border: 2px solid var(--laranja-escuro);
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-view-members:hover {
+    background-color: var(--laranja-escuro);
+    color: var(--branco);
+    transform: translateY(-3px);
+}
+
+.members-modal .modal-content {
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    border-radius: 15px;
+}
+
+.member-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(204, 85, 0, 0.1);
+}
+
+.member-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--laranja-escuro);
+    margin: 0 auto 1rem;
+}
+
+.member-name {
+    color: var(--laranja-escuro);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+/* Responsividade da seção de membros e mentor*/
 @media (max-width: 767.98px) {
     .tech-items-container {
         grid-template-columns: 1fr;
@@ -211,5 +205,10 @@
     
     .tech-category {
         margin-bottom: 2rem;
+    }
+    
+    .mentor-img {
+        width: 150px;
+        height: 150px;
     }
 }

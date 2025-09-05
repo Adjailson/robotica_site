@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <!--Alterar o titulo da página  - Liandro-->
-        {% block titulo%}
-            Clube de Robótica Suassuna
-        {% endblock %}
-    </title>
+    <title>Clube de Robótica Suassuna</title>
     <!-- Bootstrap CSS -->
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/geral.css">
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/geral.css')}}">
+    {% block css%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    {% endblock %}
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    {%block body%}
     <!-- Cabeçalho -->
     <header class="header text-center">
         <div class="container">
@@ -26,20 +25,16 @@
             </div>
             <h1 class="mb-3">Clube de Robótica Suassuna</h1>
             <p class="lead mx-auto" style="max-width: 700px;">
-                <!--Alterar o texto que está escrito no cabeçalho - Liandro-->
-                {% block area_cabecalho%}
                 O Clube de Robótica Suassuna é dedicado a inspirar e educar a próxima geração de inovadores. 
                 Através de projetos práticos e competições, nossos membros desenvolvem habilidades em programação, 
                 engenharia e trabalho em equipe, enquanto exploram o emocionante mundo da robótica e da tecnologia.
-                {% endblock %}
             </p>
             <a href="https://www.instagram.com/robotica_suassuna/" class="btn btn-instagram" target="_blank">
                 <i class="fab fa-instagram me-2"></i> Siga-nos no Instagram
             </a>
         </div>
     </header>
-    <!--Bloco que vai ser flexivel a mudanças, pode ser alterados completamente. Unicas coisas que vão ser fixa no body é o header(cabeçalho) e o footer(rodape) - Liandro-->
-    {% block body%}
+    
     <!-- Seção de Notícias -->
     <section class="news-section">
         <div class="container">
@@ -50,8 +45,8 @@
                     <div class="card">
                         <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor,</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat harum quae itaque quos temporibus quis porro voluptatibus ex autem voluptate fuga mollitia adipisci id quaerat omnis, natus aliquid consequuntur
+                            <h5 class="card-title">Clube de Robótica conquista 1º lugar em competição regional</h5>
+                            <p class="card-text">Nossa equipe desenvolveu um robô autônomo que superou todos os desafios da competição, demonstrando criatividade e excelência técnica na solução de problemas complexos.
                             </p>
                             <p class="text-muted"><small>Publicado em 15/07/2023</small></p>
                         </div>
@@ -63,8 +58,8 @@
                     <div class="card">
                         <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11e1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat harum quae itaque quos temporibus quis porro voluptatibus ex autem voluptate fuga mollitia adipisci id quaerat omnis, natus aliquid consequuntur!</p>
+                            <h5 class="card-title">>Workshop de introdução à robótica atrai mais de 50 participantes</h5>
+                            <p class="card-text">O evento ofereceu uma oportunidade para estudantes aprenderem conceitos básicos de programação e montagem de robôs, despertando interesse pela área de tecnologia.</p>
                             <p class="text-muted"><small>Publicado em 05/07/2023</small></p>
                         </div>
                     </div>
@@ -75,10 +70,34 @@
                     <div class="card">
                         <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing eli</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat harum quae itaque quos temporibus quis porro voluptatibus ex autem voluptate fuga mollitia adipisci id quaerat omnis, natus aliquid consequuntur</p>
+                            <h5 class="card-title">Inauguração do novo laboratório de robótica com equipamentos de última geração</h5>
+                            <p class="card-text">O espaço conta com impressoras 3D, kits de Arduino e componentes eletrônicos que permitirão o desenvolvimento de projetos ainda mais ambiciosos e inovadores.</p>
                             <p class="text-muted"><small>Publicado em 20/06/2023</small></p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova Seção do Professor Orientador -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Nossa Equipe</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="mentor-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80" 
+                             alt="Professor Orientador" class="mentor-img">
+                        <h3 class="mentor-name">Prof. Dr. Carlos Silva</h3>
+                        <p class="mentor-role">Professor Orientador</p>
+                        <p class="mentor-description">
+                            Com mais de 15 anos de experiência em robótica educacional, o Professor Carlos é o fundador e orientador do Clube de Robótica Suassuna. 
+                            Doutor em Engenharia Mecatrônica pela USP, ele dedica-se a inspirar jovens talentos e guiá-los no mundo da tecnologia e inovação.
+                        </p>
+                        <a href="#" class="btn-view-members" data-bs-toggle="modal" data-bs-target="#membersModal">
+                            <i class="fas fa-users me-2"></i> Conheça todos os membros
+                        </a>
                     </div>
                 </div>
             </div>
@@ -296,24 +315,65 @@
             </div>
         </div>
     </section>
-    {% endblock %}
-    <!-- Rodapé -->
-    <footer class="py-4 bg-dark text-center">
-        <div class="container">
-            <div class="footer-links">
-                <!--Esse url_for conecta o link diretamente na função de routes no arquivo routes. Assim pode alterar a url do site sem quebrar ele - Liandro-->
-                <a href="{{url_for('index')}}">Home</a>
-                <a href="#">Sobre</a>
-                <a href="#">Galeria</a>
-                <a href="#">Espaço Maker</a>
-                <a href="#">Eventos</a>
-                <a href="{{url_for('contatos')}}">Contato</a>
+    
+    <!-- Modal de Membros -->
+    <div class="modal fade members-modal" id="membersModal" tabindex="-1" aria-labelledby="membersModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="membersModalLabel">Todos os Membros do Clube</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Membro 1 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="member-card">
+                                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80" 
+                                     alt="Membro 1" class="member-img">
+                                <h4 class="member-name">Arnaldo Santos</h4>
+                                <p class="member-role">Líder de Projetos</p>
+                                <p class="member-description">Especialista em Arduino e programação Python. Responsável pelo desenvolvimento de sistemas embarcados.</p>
+                            </div>
+                        </div>
+                        <!-- Membro 2 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="member-card">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80" 
+                                     alt="Membro 2" class="member-img">
+                                <h4 class="member-name">Bruna Oliveira</h4>
+                                <p class="member-role">Especialista em IoT</p>
+                                <p class="member-description">Focado no desenvolvimento de soluções de Internet das Coisas com ESP32 e integração com nuvem.</p>
+                            </div>
+                        </div>
+                        <!-- Membro 3 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="member-card">
+                                <img src="https://images.unsplash.com/photo-1623582854588-d60de57fa33f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80" 
+                                     alt="Membro 3" class="member-img">
+                                <h4 class="member-name">Carlos Lima</h4>
+                                <p class="member-role">Desenvolvedor Web</p>
+                                <p class="member-description">Responsável pelo desenvolvimento de interfaces e sistemas web para os projetos do clube.</p>
+                            </div>
+                        </div>
+                        <!-- Membro 4 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="member-card">
+                                <img src="https://images.unsplash.com/photo-1629467057571-42d22d8f0cbd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80" 
+                                     alt="Membro 4" class="member-img">
+                                <h4 class="member-name">Daniel Costa</h4>
+                                <p class="member-role">Designer de Robótica</p>
+                                <p class="member-description">Especialista em design 3D e prototipagem de componentes robóticos usando materiais reciclados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="mb-0">&copy; 2025 Clube de Robótica Suassuna. Todos os direitos reservados.</p>
         </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
+    </div>
+    {% include 'rodape.html'%}
+    {% endblock%}
+        <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

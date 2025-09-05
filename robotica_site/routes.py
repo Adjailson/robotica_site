@@ -7,6 +7,7 @@ from robotica_site import app
 def index():
     return render_template('index.html')
 
+'''
 @app.route('/contatos')
 def contatos():
     return render_template('contatos.html')
@@ -22,3 +23,4 @@ def galeria():
 @app.route('/espaço-maker')
 def espaco():
     return render_template('espaco_maker.html')
+'''

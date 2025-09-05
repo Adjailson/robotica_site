@@ -1,17 +1,55 @@
+/*Configuração geral*/
 :root {
     --azul-escuro: #0a192f;
     --laranja-escuro: #cc5500;
     --preto: #000000;
     --branco: #ffffff;
+    --cinza-escuro: #1a1a1a; /* Nova variável adicionada */
 }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--branco);
     background-color: var(--preto);
 }
+/* Cards*/
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+    height: 100%;
+    color: var(--branco);
+    margin-bottom: 1.5rem;
+}
 
-/*Rodapé - Liandro*/
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(204, 85, 0, 0.3);
+}
 
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--laranja-escuro);
+}
+
+.btn-outline-tech {
+    border: 1px solid var(--laranja-escuro);
+    color: var(--laranja-escuro);
+    transition: all 0.3s;
+}
+
+.btn-outline-tech:hover {
+    background-color: var(--laranja-escuro);
+    color: white;
+}
+/*Rodape*/
 .footer-links {
     display: flex;
     justify-content: center;
@@ -19,11 +57,13 @@ body {
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
+
 .footer-links a {
     color: var(--branco);
     text-decoration: none;
     transition: color 0.3s;
 }
+
 .footer-links a:hover {
     color: var(--laranja-escuro);
 }
