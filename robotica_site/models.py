@@ -14,8 +14,8 @@ class Noticias(database.Model):
 class Usuario(database.Model, UserMixin):
     id = database.Column(database.Integer, primary_key=True)
     status = database.Column(database.Integer, default = 4, nullable = False)
-    nome = database.Column(database.String, nullable = False)
-    sobrenome = database.Column(database.String, nullable = False)
+    nome = database.Column(database.String, nullable = True)
+    sobrenome = database.Column(database.String, nullable = True)
     email = database.Column(database.String, nullable = False, unique = True)
     senha = database.Column(database.String, nullable = False)
     imagem = database.Column(database.String, nullable = True, default = None)
