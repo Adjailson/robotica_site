@@ -10,6 +10,6 @@ app.config["SECRET_KEY"] = "a0526e4ddd22ec39d5190eae54474541"
 
 database = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
-
+login_manager = LoginManager(app)
 
 from robotica_site import routes
