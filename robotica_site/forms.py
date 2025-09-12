@@ -16,11 +16,11 @@ class FormCriarConta(FlaskForm):
     confirmar_senha = PasswordField("Confirmar senha", validators=[Length(4,16), DataRequired(), EqualTo("senha")])
     botao_confirmacao = SubmitField("Criar conta")
 
-'''Ainda falta alguns detalhes para garantir que no banco de dados que o email seja unico
- def validate_email(self, email):
+
+    def validate_email(self, email):
         usuario = Usuario.query.filter_by(email = email.data).first()
         if usuario:
-            return ValidationError("E-mail já cadastrado, faça login para continuar")'''
+            return ValidationError("E-mail já cadastrado, faça login para continuar")
         
 #Ainda em trabalho para adicionar usuarios cadastrados em membros
 class FormMembroClube(FlaskForm):
